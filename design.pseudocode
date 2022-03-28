@@ -1,5 +1,8 @@
-GET diameter
-CALCULATE untaxed_price = 0.75 + 1.00 + 0.5 * diameter
-CALCULATE HST = untaxed_price * 0.13
-CALCULATE total_cost = untaxed_price + HST
-SHOW total_cost
+GET number_compared
+IF (number_compared >= 0) THEN
+    SHOW "number_compared is a positive number."
+ELSEIF (number_compared <= 0) THEN
+    SHOW "number_compared is a negative number."
+ELSE
+    SHOW "number_compared is just 0!"
+ENDIF
